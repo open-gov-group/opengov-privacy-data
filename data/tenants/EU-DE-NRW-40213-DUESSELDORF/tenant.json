@@ -9,30 +9,30 @@
     "title": "",
     "description": "",
     "address": {
-      "organization": "Stadt Düseldorf",
-      "street": "",
-      "postalCode": "",
+      "organization": "Stadt Düsseldorf",
+      "street": "Marktplatz 2",
+      "postalCode": "40213",
       "city": "",
       "country": "DE",
       "website": ""
     },
     "parties": [
       {
-        "uuid": "27d0c0d9-5869-4819-9cf3-dab4631db6ee",
+        "uuid": "a8b38c9d-a39e-46d4-a499-0fc519d7466c",
         "type": "person",
         "name": "",
         "email-addresses": [],
         "telephones": []
       },
       {
-        "uuid": "987c149f-2600-47b3-a00c-6afb377b0233",
+        "uuid": "70bbed9b-964b-4b51-a503-92a74aa44438",
         "type": "person",
         "name": "",
         "email-addresses": [],
         "telephones": []
       },
       {
-        "uuid": "0f3a9aaf-ba58-4dbd-8b93-dc5017062f59",
+        "uuid": "c98ecaf9-c673-4656-a564-9b18a0cb8941",
         "type": "person",
         "name": "",
         "email-addresses": [],
@@ -43,19 +43,19 @@
       {
         "role-id": "owner",
         "party-uuids": [
-          "27d0c0d9-5869-4819-9cf3-dab4631db6ee"
+          "a8b38c9d-a39e-46d4-a499-0fc519d7466c"
         ]
       },
       {
         "role-id": "dpo",
         "party-uuids": [
-          "987c149f-2600-47b3-a00c-6afb377b0233"
+          "70bbed9b-964b-4b51-a503-92a74aa44438"
         ]
       },
       {
         "role-id": "iso",
         "party-uuids": [
-          "0f3a9aaf-ba58-4dbd-8b93-dc5017062f59"
+          "c98ecaf9-c673-4656-a564-9b18a0cb8941"
         ]
       }
     ]
