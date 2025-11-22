@@ -18,21 +18,21 @@
     },
     "parties": [
       {
-        "uuid": "a583b13f-693d-47e8-af88-d254db888f1d",
+        "uuid": "d8f60116-c409-46ef-82c6-04ac3dc1c230",
         "type": "person",
         "name": "",
         "email-addresses": [],
         "telephones": []
       },
       {
-        "uuid": "9031edf4-d4e6-4aff-a160-527163afae87",
+        "uuid": "8d337cfa-6969-45f5-820f-31862a38dbf8",
         "type": "person",
         "name": "",
         "email-addresses": [],
         "telephones": []
       },
       {
-        "uuid": "6cbf2464-b40d-40bd-90ad-54d9c31c78a3",
+        "uuid": "ba9571a4-b0a7-4d6b-9eb7-d228f0847647",
         "type": "person",
         "name": "",
         "email-addresses": [],
@@ -43,19 +43,19 @@
       {
         "role-id": "owner",
         "party-uuids": [
-          "a583b13f-693d-47e8-af88-d254db888f1d"
+          "d8f60116-c409-46ef-82c6-04ac3dc1c230"
         ]
       },
       {
         "role-id": "dpo",
         "party-uuids": [
-          "9031edf4-d4e6-4aff-a160-527163afae87"
+          "8d337cfa-6969-45f5-820f-31862a38dbf8"
         ]
       },
       {
         "role-id": "iso",
         "party-uuids": [
-          "6cbf2464-b40d-40bd-90ad-54d9c31c78a3"
+          "ba9571a4-b0a7-4d6b-9eb7-d228f0847647"
         ]
       }
     ]
