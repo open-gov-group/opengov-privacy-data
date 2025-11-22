@@ -5,7 +5,9 @@
     "street": "Berger Allee 29",
     "postalCode": "40213",
     "city": "Düsseldorf",
-    "country": "DE"
+    "country": "DE",
+    "organization": "",
+    "website": ""
   },
   "contacts": [
     {
@@ -20,5 +22,22 @@
   "legal": {
     "registryId": "DE1234567",
     "gdprRepresentative": null
+  },
+  "title": "",
+  "description": "",
+  "owner": {
+    "name": "",
+    "email": "",
+    "phone": ""
+  },
+  "dpo": {
+    "name": "Peter Prüfer",
+    "email": "datenschutz@duesseldorf.de",
+    "phone": ""
+  },
+  "iso": {
+    "name": "",
+    "email": "",
+    "phone": ""
   }
 }
