@@ -1,8 +1,24 @@
 {
-  "orgId": "EU-DE-NRW-40213-DUESSELDORF",
-  "orgName": "",
-  "contactEmail": "",
-  "createdAt": "2025-11-21T12:17:30.474Z",
-  "updatedAt": "2025-11-21T12:17:30.474Z",
-  "version": "0.1.0"
+  "orgId": "EU-GER-NW-05111-DUESSELDORF",
+  "displayName": "Stadt Düsseldorf – Einwohnermeldeamt",
+  "address": {
+    "street": "Berger Allee 29",
+    "postalCode": "40213",
+    "city": "Düsseldorf",
+    "country": "DE"
+  },
+  "contacts": [
+    {
+      "role": "controller",
+      "email": "info@duesseldorf.de"
+    },
+    {
+      "role": "dpo",
+      "email": "datenschutz@duesseldorf.de"
+    }
+  ],
+  "legal": {
+    "registryId": "DE1234567",
+    "gdprRepresentative": null
+  }
 }
