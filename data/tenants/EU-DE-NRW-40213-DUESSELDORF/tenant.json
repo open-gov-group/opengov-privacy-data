@@ -4,5 +4,60 @@
   "contactEmail": "",
   "createdAt": "2025-11-21T12:17:30.474Z",
   "updatedAt": "2025-11-21T12:17:30.474Z",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "metadata": {
+    "title": "",
+    "description": "",
+    "address": {
+      "organization": "Stadt Düsseldorf",
+      "street": "",
+      "postalCode": "",
+      "city": "",
+      "country": "DE",
+      "website": ""
+    },
+    "parties": [
+      {
+        "uuid": "8cdff645-7fe5-4bf4-828f-bdefd551271d",
+        "type": "person",
+        "name": "",
+        "email-addresses": [],
+        "telephones": []
+      },
+      {
+        "uuid": "855450e8-5873-41ce-ad09-d44a56f35b45",
+        "type": "person",
+        "name": "",
+        "email-addresses": [],
+        "telephones": []
+      },
+      {
+        "uuid": "7e4a714c-2163-4035-9680-e955f0939d38",
+        "type": "person",
+        "name": "",
+        "email-addresses": [],
+        "telephones": []
+      }
+    ],
+    "responsible-parties": [
+      {
+        "role-id": "owner",
+        "party-uuids": [
+          "8cdff645-7fe5-4bf4-828f-bdefd551271d"
+        ]
+      },
+      {
+        "role-id": "dpo",
+        "party-uuids": [
+          "855450e8-5873-41ce-ad09-d44a56f35b45"
+        ]
+      },
+      {
+        "role-id": "iso",
+        "party-uuids": [
+          "7e4a714c-2163-4035-9680-e955f0939d38"
+        ]
+      }
+    ]
+  }
 }
