@@ -5,7 +5,9 @@
     "street": "Berger Allee 29",
     "postalCode": "40213",
     "city": "Düsseldorf",
-    "country": "DE"
+    "country": "DE",
+    "organization": "",
+    "website": ""
   },
   "contacts": [
     {
@@ -21,59 +23,21 @@
     "registryId": "DE1234567",
     "gdprRepresentative": null
   },
-  "metadata": {
-    "title": "",
-    "description": "",
-    "address": {
-      "organization": "Stadt Düsseldorf – Einwohnermeldeamt",
-      "street": "",
-      "postalCode": "",
-      "city": "",
-      "country": "DE",
-      "website": ""
-    },
-    "parties": [
-      {
-        "uuid": "6cfd0c34-c8bd-4552-93b8-d48f6327624c",
-        "type": "person",
-        "name": "",
-        "email-addresses": [],
-        "telephones": []
-      },
-      {
-        "uuid": "7f6a5298-d690-49e7-bc1e-aea46c2d170e",
-        "type": "person",
-        "name": "",
-        "email-addresses": [],
-        "telephones": []
-      },
-      {
-        "uuid": "0e4f98fe-da50-4dd8-afd4-a7b236c71bef",
-        "type": "person",
-        "name": "",
-        "email-addresses": [],
-        "telephones": []
-      }
-    ],
-    "responsible-parties": [
-      {
-        "role-id": "owner",
-        "party-uuids": [
-          "6cfd0c34-c8bd-4552-93b8-d48f6327624c"
-        ]
-      },
-      {
-        "role-id": "dpo",
-        "party-uuids": [
-          "7f6a5298-d690-49e7-bc1e-aea46c2d170e"
-        ]
-      },
-      {
-        "role-id": "iso",
-        "party-uuids": [
-          "0e4f98fe-da50-4dd8-afd4-a7b236c71bef"
-        ]
-      }
-    ]
+  "title": "",
+  "description": "",
+  "owner": {
+    "name": "",
+    "email": "",
+    "phone": ""
+  },
+  "dpo": {
+    "name": "Peter Prüfer",
+    "email": "datenchutz@duesseldorf.de",
+    "phone": ""
+  },
+  "iso": {
+    "name": "",
+    "email": "",
+    "phone": ""
   }
 }
