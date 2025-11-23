@@ -1,0 +1,90 @@
+# --- OS & Editor noise ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.log
+.nvmrc
+.idea/
+.vscode/
+*.code-workspace
+
+# --- Node / Python / tooling (falls mal temporär genutzt) ---
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+.venv/
+__pycache__/
+
+# --- Build/Cache/Temp ---
+dist/
+build/
+out/
+.cache/
+.tmp/
+coverage/
+.nyc_output/
+
+# --- Secrets & local overrides (niemals in Git) ---
+.env
+.env.*
+*.secret.*
+secrets/
+tokens/
+private/
+*.key
+*.pem
+*.p12
+*.crt
+
+# --- Evidence binaries: default ausschließen, gezielt whitelisten ---
+# PDFs, Bilder, Exporte etc. NICHT standardmäßig einchecken – Referenzen via back-matter/rlinks.
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tif
+*.tiff
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Falls ihr doch ausgewählte Belege versionieren wollt (z. B. Muster),
+# könnt ihr sie per negate-regel ausdrücklich erlauben, z. B.:
+#!evidence/samples/**
+
+# --- Data repo: nur strukturierte Daten rein ---
+# Erlaubt: JSON/YAML/CSV unter data/ und org-spezifischen Pfaden
+# (kein ignore, nur Hinweis – die folgenden Whitelists greifen NUR wenn
+# darüber liegende Wildcards zu viel wegfiltern würden)
+
+# Beispiel-Struktur (kein ignore, nur Doku):
+# data/
+#   orgs/<org-id>/
+#     processes/<proc-id>/ssp.json
+#     ropa/<proc-id>.json
+#     poam/<proc-id>.json
+# catalogs/
+# profiles/
+# registries/ (normalisierte Vokabulare)
+# mappings/ (optional: veröffentlichte Mapping-Resultate)
+
+# --- Git LFS (optional): falls ihr bestimmte Binärtypen doch tracken wollt ---
+# .gitattributes steuert LFS; .gitignore nicht erforderlich.
+# Beispiel .gitattributes:
+#   evidence/** filter=lfs diff=lfs merge=lfs -text
