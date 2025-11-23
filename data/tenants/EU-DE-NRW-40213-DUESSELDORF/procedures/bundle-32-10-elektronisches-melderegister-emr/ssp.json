@@ -1,9 +1,9 @@
 {
   "system-security-plan": {
-    "uuid": "71f2e972-5e0f-44f1-b731-fa01de11cd63",
+    "uuid": "599a9ada-45ea-4cf3-82f1-6128103c060b",
     "metadata": {
       "title": "32.10 – Elektronisches Melderegister (EMR)",
-      "last-modified": "2025-11-23T13:28:24.033Z",
+      "last-modified": "2025-11-23T14:26:37.168Z",
       "version": "0.1.0",
       "oscal-version": "1.1.2"
     },
