@@ -1,0 +1,877 @@
+{
+  "system-security-plan": {
+    "uuid": "ropa-sdm-ssp-0002",
+    "metadata": {
+      "title": "RoPA (SDM) – Zuzugsmeldebehörde Musterstadt",
+      "last-modified": "2025-08-15",
+      "version": "1.1",
+      "oscal-version": "1.1.3",
+      "parties": {
+        "party": {
+          "uuid": "org-zmb",
+          "type": "organization",
+          "name": "Zuzugsmeldebehörde Musterstadt",
+          "email-address": "dsb@musterstadt.de"
+        }
+      },
+      "responsible-parties": {
+        "responsible-party": [
+          {
+            "role-id": "asset-owner",
+            "party-uuid": "org-zmb"
+          },
+          {
+            "role-id": "privacy-poc",
+            "party-uuid": "org-zmb"
+          }
+        ]
+      }
+    },
+    "system-characteristics": {
+      "system-name": "Meldeverfahren Musterstadt",
+      "system-name-short": "Melderegister",
+      "description": "IFG-Ansicht gemäß RoPA/SDM – v2 mit strenger Empfänger-Zuordnung und sortierten Listen.",
+      "status": {
+        "state": "operational"
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-moderate",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-moderate"
+      },
+      "system-information": {
+        "information-type": {
+          "uuid": "it-melderegister",
+          "title": "Melderegisterdaten",
+          "description": "Registerdaten inkl. Stammdaten, Wohnungsgeberbestätigung, Protokolldaten",
+          "confidentiality-impact": {
+            "base": "fips-199-moderate"
+          },
+          "integrity-impact": {
+            "base": "fips-199-moderate"
+          },
+          "availability-impact": {
+            "base": "fips-199-moderate"
+          }
+        }
+      }
+    },
+    "system-implementation": {
+      "components": {
+        "component": [
+          {
+            "uuid": "PORTAL-01",
+            "type": "software",
+            "title": "Verwaltungsportal",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "role",
+                  "value": "portal"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "portal"
+                },
+                {
+                  "name": "responsibility",
+                  "value": "Auftragsverarbeitung"
+                },
+                {
+                  "name": "av-contract-id",
+                  "value": "AV-2024-005"
+                },
+                {
+                  "name": "operation",
+                  "value": "eID-Auslesen"
+                },
+                {
+                  "name": "operation",
+                  "value": "Upload PDF"
+                },
+                {
+                  "name": "operation",
+                  "value": "XMeld-Nachricht an Fachverfahren"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "FACH-REG-01",
+            "type": "software",
+            "title": "Melde-Fachverfahren",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "role",
+                  "value": "fachverfahren"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "fachverfahren"
+                },
+                {
+                  "name": "operation",
+                  "value": "Plausibilisierung"
+                },
+                {
+                  "name": "operation",
+                  "value": "Manuelle Prüfung"
+                },
+                {
+                  "name": "operation",
+                  "value": "Registerfortschreibung"
+                },
+                {
+                  "name": "operation",
+                  "value": "Meldebestätigung"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "REGISTER-01",
+            "type": "software",
+            "title": "Melderegister",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "role",
+                  "value": "register"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "register"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "RZ-01",
+            "type": "service",
+            "title": "Kommunales Rechenzentrum",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "type",
+                  "value": "rechenzentrum"
+                },
+                {
+                  "name": "location",
+                  "value": "DE"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "rechenzentrum"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "NETZ-01",
+            "type": "service",
+            "title": "Verwaltungsnetz DE",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "type",
+                  "value": "netz"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "netz"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "PKI-01",
+            "type": "service",
+            "title": "eID-Infrastruktur",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "type",
+                  "value": "pki_eid"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "pki"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "LOG-01",
+            "type": "service",
+            "title": "Zentrales Logsystem",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "type",
+                  "value": "logging"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "logging"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "FACH-WEG-01",
+            "type": "software",
+            "title": "Fachverfahren Wegzugsbehörde",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "role",
+                  "value": "fachverfahren"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "fachverfahren"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "DRUCK-01",
+            "type": "software",
+            "title": "Druck/Versand",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "role",
+                  "value": "druck_versand"
+                },
+                {
+                  "name": "processing-role",
+                  "value": "druck_versand"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "MELDE-001",
+            "type": "process",
+            "title": "Elektronische Anmeldung (Upload-Modell)",
+            "description": "Upload Wohnungsgeberbestätigung, Plausibilisierung, manuelle Prüfung, Registerfortschreibung, Meldebestätigung.",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "procedure-title",
+                  "value": "Aktualisierung Melderegister; Erteilung Meldebestätigung"
+                },
+                {
+                  "name": "purpose",
+                  "value": "Aktualisierung Melderegister; Erteilung Meldebestätigung"
+                },
+                {
+                  "name": "purpose",
+                  "value": "Durchführung gesetzlicher Anmeldung"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "DSGVO_6_1_c_e"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "DSGVO Art. 6 – Erfüllung rechtlicher Verpflichtung/öffentliche Aufgabe"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMG_17_19_23a_24_36_42_50"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMG §§ 17, 19, 23a, 24, 36, 42, 50"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMeldDigiV_4_9_10"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMeldDigiV §§ 4, 9, 10"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMG_40_4"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMG § 40 Abs. 4 – Protokollierung"
+                },
+                {
+                  "name": "data-subject",
+                  "value": "Antragsteller:in (Berechtigte Person)"
+                },
+                {
+                  "name": "data-subject",
+                  "value": "Familienangehörige (Ehepartner, Kinder)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Anschrift/Wohnungsdaten (AGS, Straße, Hausnr., Einzugsdatum)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Familienbezug"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Hochgeladenes PDF (Wohnungsgeberbestätigung)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Protokolldaten"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Stammdaten (Name, Vornamen, Geburtsdatum)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Vorgangs-/Aktenzeichen"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Wohnungsgeberdaten"
+                },
+                {
+                  "name": "retention.logical",
+                  "value": "Vorgangsdaten bis Abschluss; Portal-Artefakte nach Weiterleitung löschen"
+                },
+                {
+                  "name": "retention.archival",
+                  "value": "Melderegister nach BMG; Vorgangsakte gem. Hausaktenplan (z. B. 10 Jahre)"
+                },
+                {
+                  "name": "retention.trigger",
+                  "value": "Abschluss des Verwaltungsverfahrens"
+                },
+                {
+                  "name": "dpia.required",
+                  "value": "ja – Große Anzahl Betroffener, eID; sensible Registerdaten"
+                },
+                {
+                  "name": "third-country-transfer",
+                  "value": "nein"
+                },
+                {
+                  "name": "special-category.art9",
+                  "value": "h"
+                },
+                {
+                  "name": "criminal-data.art10",
+                  "value": "nein"
+                },
+                {
+                  "name": "recipient",
+                  "value": "FACH-REG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "LOG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "NETZ-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "PKI-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "PORTAL-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "REGISTER-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "RZ-01"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "MELDE-002",
+            "type": "process",
+            "title": "Datenanforderung (vorausgefüllter Meldeschein)",
+            "description": "Synchroner Abruf bei Wegzugsbehörde über Portal zur Identifikation und Datenbereitstellung.",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "procedure-title",
+                  "value": "Identifikation und Übernahme von Basisdaten"
+                },
+                {
+                  "name": "purpose",
+                  "value": "Identifikation und Übernahme von Basisdaten"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "DSGVO_6_1_c_e"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "DSGVO Art. 6 Abs. 1 lit. c/e"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMG_23a"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMG § 23a"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMeldDigiV_9"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMeldDigiV § 9"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMG_40_4"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMG § 40 Abs. 4 – Protokollierung"
+                },
+                {
+                  "name": "data-subject",
+                  "value": "Antragsteller:in"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Basis-Meldedaten (Wegzugsbehörde)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Ident-Daten (eID)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Technische Metadaten"
+                },
+                {
+                  "name": "retention.logical",
+                  "value": "Vorgangsdaten bis Abschluss"
+                },
+                {
+                  "name": "retention.archival",
+                  "value": "Registerführung verbleibt bei den Behörden gem. BMG"
+                },
+                {
+                  "name": "dpia.required",
+                  "value": "nein"
+                },
+                {
+                  "name": "third-country-transfer",
+                  "value": "nein"
+                },
+                {
+                  "name": "recipient",
+                  "value": "FACH-REG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "FACH-WEG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "LOG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "NETZ-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "PKI-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "PORTAL-01"
+                }
+              ]
+            }
+          },
+          {
+            "uuid": "MELDE-003",
+            "type": "process",
+            "title": "Bestätigungscode-Verfahren",
+            "description": "Code-Erzeugung, Fristmanagement, Eingabe, Abgleich, Abschluss.",
+            "status": {
+              "state": "operational"
+            },
+            "props": {
+              "prop": [
+                {
+                  "name": "procedure-title",
+                  "value": "Ersatz-Nachweis der Wohnungsgeberbestätigung"
+                },
+                {
+                  "name": "purpose",
+                  "value": "Ersatz-Nachweis der Wohnungsgeberbestätigung"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "DSGVO_6_1_c_e"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "DSGVO Art. 6 Abs. 1 lit. c/e"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMG_23a_3"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMG § 23a Abs. 3"
+                },
+                {
+                  "name": "legal-basis",
+                  "value": "BMeldDigiV_9_3"
+                },
+                {
+                  "name": "legal-basis-label",
+                  "value": "BMeldDigiV § 9 Abs. 3"
+                },
+                {
+                  "name": "data-subject",
+                  "value": "Antragsteller:in"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Anschreiben-PDF (optional)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Bestätigungscode (inkl. AGS-Anteil)"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Fristdaten/Status"
+                },
+                {
+                  "name": "data-category",
+                  "value": "Ident-Daten (eID)"
+                },
+                {
+                  "name": "retention.logical",
+                  "value": "Portal-Anschreiben nach Versand löschen; Vorgangsdaten bis Abschluss"
+                },
+                {
+                  "name": "retention.archival",
+                  "value": "Register/Verfahrensakte gem. BMG/Hausaktenplan"
+                },
+                {
+                  "name": "retention.trigger",
+                  "value": "Fristende + 7 Tage (Code-Gültigkeit)"
+                },
+                {
+                  "name": "dpia.required",
+                  "value": "nein"
+                },
+                {
+                  "name": "third-country-transfer",
+                  "value": "nein"
+                },
+                {
+                  "name": "recipient",
+                  "value": "DRUCK-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "FACH-REG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "LOG-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "NETZ-01"
+                },
+                {
+                  "name": "recipient",
+                  "value": "PORTAL-01"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "control-implementation": {
+      "implemented-requirement": [
+        {
+          "uuid": "ir-001-zu",
+          "control-id": "TOM.zugangskontrolle",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Zugangskontrolle"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "Gebäudesicherheit RZ"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-001-zi",
+          "control-id": "TOM.zugriffskontrolle",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Zugriffskontrolle"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "Rollen/Rechte im Fachverfahren"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-001-tr",
+          "control-id": "TOM.transportverschluesselung",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Transportverschlüsselung"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "TLS (Portal↔Fachverfahren)"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-001-pl",
+          "control-id": "TOM.protokollierung",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Protokollierung"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "§ 40 Abs. 4 BMG"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-001-lo",
+          "control-id": "TOM.loeschkonzept",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Löschkonzept"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "Portal-Uploads nach Weiterleitung löschen"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-001-info",
+          "control-id": "TOM.info",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Informationspflichten"
+            }
+          },
+          "links": {
+            "link": {
+              "href": "Art. 13 DSGVO über Portal; Hinweise auf Protokollierung (§ 40 Abs. 4 BMG)",
+              "rel": "public-information"
+            }
+          }
+        },
+        {
+          "uuid": "ir-002-tr",
+          "control-id": "TOM.transportverschluesselung",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Transportverschlüsselung"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-002",
+                "description": "TLS/XMeld"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-002-pl",
+          "control-id": "TOM.protokollierung",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Protokollierung"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-002",
+                "description": "§ 40 Abs. 4 BMG"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-003-zi",
+          "control-id": "TOM.zugriffskontrolle",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Zugriffskontrolle"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-003",
+                "description": "Rollen im Fachverfahren"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-003-we",
+          "control-id": "TOM.weitergabekontrolle",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Weitergabekontrolle"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-003",
+                "description": "XMeld-Restriktionen"
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ir-003-lo",
+          "control-id": "TOM.loeschkonzept",
+          "props": {
+            "prop": {
+              "name": "tom",
+              "value": "Löschkonzept"
+            }
+          },
+          "statements": {
+            "statement": {
+              "statement-id": "s1",
+              "by-component": {
+                "component-uuid": "MELDE-003",
+                "description": "Autom. Löschung Anschreiben-PDF"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": {
+        "resource": [
+          {
+            "uuid": "res-p1",
+            "title": "Bundesanzeiger – Kernprozess S. 9"
+          },
+          {
+            "uuid": "res-p2",
+            "title": "Bundesanzeiger – Prozess S. 27"
+          },
+          {
+            "uuid": "res-p3",
+            "title": "Bundesanzeiger – Prozess S. 32"
+          }
+        ]
+      }
+    }
+  }
+}

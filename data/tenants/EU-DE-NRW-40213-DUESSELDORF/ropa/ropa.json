@@ -2,6 +2,11 @@
   "orgId": "EU-DE-NRW-40213-DUESSELDORF",
   "updatedAt": "2025-01-01T00:00:00.000Z",
   "processes": [
+      {
+      "id": "musterstadt-meldeverfahren",
+      "title": "musterstadt-meldeverfahren",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-musterstadt-meldeverfahren"
+    },
     {
       "id": "stadt-d-sseldorf-aktenplan-einwohnermeldeamt",
       "title": "stadt-d-sseldorf-aktenplan-einwohnermeldeamt",
