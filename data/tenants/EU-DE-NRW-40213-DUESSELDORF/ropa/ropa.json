@@ -1,0 +1,31 @@
+{
+  "orgId": "EU-DE-NRW-40213-DUESSELDORF",
+  "updatedAt": "2025-11-23T17:08:01.046Z",
+  "processes": [
+    {
+      "id": "stadt-d-sseldorf-aktenplan-einwohnermeldeamt",
+      "title": "Stadt Düsseldorf – Aktenplan Einwohnermeldeamt",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-stadt-d-sseldorf-aktenplan-einwohnermeldeamt"
+    },
+    {
+      "id": "32-00-melderecht-allgemein",
+      "title": "32.00 – Melderecht allgemein",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-32-00-melderecht-allgemein"
+    },
+    {
+      "id": "32-10-elektronisches-melderegister-emr",
+      "title": "32.10 – Elektronisches Melderegister (EMR)",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-32-10-elektronisches-melderegister-emr"
+    },
+    {
+      "id": "32-20-melderegisterausk-nfte",
+      "title": "32.20 – Melderegisterauskünfte",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-32-20-melderegisterausk-nfte"
+    },
+    {
+      "id": "32-30-sonderf-lle-und-rechtsmittel",
+      "title": "32.30 – Sonderfälle und Rechtsmittel",
+      "sspHref": "/api/tenants/EU-DE-NRW-40213-DUESSELDORF/procedures/bundle-32-30-sonderf-lle-und-rechtsmittel"
+    }
+  ]
+}
