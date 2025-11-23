@@ -1,9 +1,9 @@
 {
   "system-security-plan": {
-    "uuid": "6ab35c44-f7bc-4242-9355-b1b1029ac35a",
+    "uuid": "e195e732-76ab-406d-9666-471a3c13dd50",
     "metadata": {
       "title": "32.20 – Melderegisterauskünfte",
-      "last-modified": "2025-11-23T16:40:28.998Z",
+      "last-modified": "2025-11-23T17:07:56.509Z",
       "version": "0.1.0",
       "oscal-version": "1.1.2"
     },
