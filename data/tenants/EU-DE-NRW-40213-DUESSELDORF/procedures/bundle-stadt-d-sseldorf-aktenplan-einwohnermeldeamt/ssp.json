@@ -1,9 +1,9 @@
 {
   "system-security-plan": {
-    "uuid": "796d6be4-dc7d-4f44-9ffe-8f60e72427e1",
+    "uuid": "01dcbc6c-8bc2-44ba-8c98-1690c903330e",
     "metadata": {
       "title": "Stadt Düsseldorf – Aktenplan Einwohnermeldeamt",
-      "last-modified": "2025-11-23T14:26:33.185Z",
+      "last-modified": "2025-11-23T15:21:41.136Z",
       "version": "0.1.0",
       "oscal-version": "1.1.2"
     },
