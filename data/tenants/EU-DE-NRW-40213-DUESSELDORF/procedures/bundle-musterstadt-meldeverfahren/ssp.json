@@ -852,6 +852,96 @@
               }
             }
           }
+        },
+
+        {
+          "uuid": "impl-sdm-loe-2-melde001",
+          "control-id": "sdm-loe-2",
+          "props": {
+            "prop": [
+              {
+                "name": "sdm-measure-id",
+                "value": "LÖ-2"
+              },
+              {
+                "name": "bsi-stand-der-technik-id",
+                "value": "BSI-SDT-DEL-LOG-01"
+              },
+              {
+                "name": "processing-activity",
+                "value": "Elektronische Anmeldung (Upload-Modell)"
+              }
+            ]
+          },
+          "statements": [
+            {
+              "statement-id": "st-impl-sdm-loe-2-melde001",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "Das Fachverfahren MELDE-001 unterstützt regelbasierte Lösch- und Sperrfunktionen für Vorgangs- und Registerdaten gemäß Löschkonzept. Löschungen werden protokolliert; bei rechtlichen Aufbewahrungspflichten erfolgt eine Funktionssperre."
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "impl-sdm-zug-3-melde001",
+          "control-id": "sdm-zug-3",
+          "props": {
+            "prop": [
+              {
+                "name": "sdm-measure-id",
+                "value": "ZUG-3"
+              },
+              {
+                "name": "bsi-stand-der-technik-id",
+                "value": "BSI-SDT-ACC-RBAC-01"
+              },
+              {
+                "name": "gdpr-reference",
+                "value": "Art.32 DS-GVO"
+              }
+            ]
+          },
+          "statements": [
+            {
+              "statement-id": "st-impl-sdm-zug-3-melde001",
+              "by-component": {
+                "component-uuid": "MELDE-001",
+                "description": "Das Melderegister-Fachverfahren implementiert eine rollenbasierte Zugriffskontrolle (RBAC). Rollen legen fest, ob Meldedaten gelesen, neu angelegt, geändert, gelöscht oder exportiert werden dürfen. Administrationsfunktionen sind privilegierten Konten vorbehalten."
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "impl-dsp-security-02-crypto",
+          "control-id": "dsp-security-02",
+          "props": {
+            "prop": [
+              {
+                "name": "gdpr-reference",
+                "value": "Art.32 Abs.1 lit a DS-GVO"
+              },
+              {
+                "name": "bsi-stand-der-technik-id",
+                "value": "BSI-SDT-CRYPTO-TLS-01"
+              }
+            ]
+          },
+          "statements": [
+            {
+              "statement-id": "st-impl-dsp-security-02-crypto",
+              "by-components": [
+                {
+                  "component-uuid": "PORTAL-01",
+                  "description": "Externe Zugriffe auf das Verwaltungsportal erfolgen ausschließlich über TLS 1.3 mit aktuellen Cipher-Suites, HSTS und Forward Secrecy."
+                },
+                {
+                  "component-uuid": "FACH-REG-01",
+                  "description": "Kommunikation zwischen Portal und Fachverfahren im Verwaltungsnetz erfolgt über gegenseitig authentifizierte TLS-Verbindungen; Zertifikate werden über PKI-01 verwaltet."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
